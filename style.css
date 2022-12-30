@@ -1,0 +1,64 @@
+/* style.css */
+
+body{
+    background-color: rgb(211, 203, 138);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    background-color: rgb(211, 149, 138);
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.paragraph-header{
+    font-weight: bold;
+}
+
+.image{
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.button-link{
+    text-align: center;
+    color: red;
+    background-color: aquamarine;
+    border: none;
+    padding: 20px 34px;
+    text-decoration: dotted;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 40px;
+}
+
+.button-link#steak{
+    background-image: url(./images/bg-steak.jpg);
+    background-size: 200px;
+} 
+
+.button-link#cali-bb{
+    background-image: url(./images/cali-bb.jpg);
+    background-size: 200px;
+}
+
+.button-link#extra{
+    background-image: url(./images/dancing-dog.gif);
+    background-size: 200px;
+}
+
+.button-link:hover{
+    color: yellow;
+}
