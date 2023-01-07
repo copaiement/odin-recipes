@@ -1,15 +1,21 @@
 /* style.css */
 
+html{
+    box-sizing: border-box;
+}
+
 body{
-    background-color: rgb(211, 203, 138);
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    
 }
 
 .header{
     background-color: rgb(211, 149, 138);
     text-align: center;
     font-size: 24px;
-
+    color: black;
 }
 
 .paragraph-header{
@@ -26,39 +32,85 @@ body{
 
 }
 
-.button-link{
-    text-align: center;
-    color: red;
-    background-color: aquamarine;
-    border: none;
-    padding: 40px;
-    text-decoration: dotted;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
-    height: 40px;
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.button-link#steak{
+.box{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    margin: 20px;
+}
+
+.box#steak{
     background-image: url(./images/bg-steak.jpg);
     background-size: 200px;
-} 
+}
 
-.button-link#cali-bb{
+.box#cali-bb{
     background-image: url(./images/cali-bb.jpg);
     background-size: 200px;
 }
 
-.button-link#extra{
+.box#extra{
     background-image: url(./images/dancing-dog.gif);
-    background-size: 200px;
+    background-size: 400px;
 }
 
-.button-link:hover{
-    color: yellow;
+.box#home{
+    background-image: url(./images/chef.jpg);
+    background-size: 400px;
 }
+
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: white;
+    z-index: -1;
+}
+
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: white;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.box:before,
+.box:after{
+    background: linear-gradient(235deg,#89ff00,black,#00bcd4);
+}
+
+.box:link{
+    text-decoration: none;
+}
+
+.box:hover,
+.box:hover:before,
+.box:hover:after{
+    background: white;
+    cursor: pointer;
+}
+
+.content{
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
